@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Create a table</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<table id="myTable" border="1"> </table>
+
+
+<form> 
+<input type="button" onclick="gernateTable()" value="Create the table"> 
+</form>
+
+
+<script>
+
+ 
+
+
+  function gernateTable(){
+  var getTable  = document.getElementById('myTable')
+RowsNumber = window.prompt("Input number of rows", 0);
+ColumnNumber = window.prompt("Input number of columns",0);
+  
+ for(let i=0;i<parseInt(RowsNumber,10); i++)
+  {
+    
+         let  createRows = getTable.insertRow(i);
+
+
+   for(let j=0; j<parseInt(ColumnNumber,10); j++)
+
+    {
+     let createColumns= createRows.insertCell(j);
+    
+   createColumns.innerHTML="Row-"+ i +" Column-"+ j; 
+
+    }
+   }
+}
+  
+</script>
+</body>
+</html>
+
